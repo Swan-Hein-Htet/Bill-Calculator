@@ -1,0 +1,15 @@
+print("Welcome to the bill calculator")
+billvar = float(input("What was the total bill ?\n"))
+quantityvar = float(input("How many people to split the bill ?\n"))
+percentvar = float(input("What percentage would you like to tip ?\n")) / 100
+
+share = round(billvar / quantityvar)
+tip = round(share * percentvar)
+
+print(f"Your total share is {share}")
+print(f"Your tip is {tip}" )
+print (f"Your total payable amount is {share + tip}")
+
+
+
+
