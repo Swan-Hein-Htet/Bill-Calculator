@@ -1,0 +1,35 @@
+print("Welcome to the bill calculator")
+billvar = float(input("What was the total bill ?\n"))
+quantityvar = float(input("How many people to split the bill ?\n"))
+percentvar = float(input("What percentage would you like to tip ?\n")) / 100
+desired_budget = float(input("What's your desired budget ?\n")) 
+max_budget = float(input("What's your maximum budget ?\n"))
+
+
+share = round(billvar / quantityvar)
+tip = round(share * percentvar)
+total = round(share + tip)
+
+if share >= round(desired_budget):
+    if share <= 90:
+        print("Exceeded your desired budget; Hope you enjoyed your meal !")
+        print(f"Your tip is {tip}" )
+        print (f"Your total payable amount is {share + tip}")
+
+    elif share >= float(max_budget):
+        print("TOO MUCH BUD")
+        print(f"Your tip is {tip}" )
+        print (f"Your total payable amount is {share + tip}")
+
+else:
+    print("youre good")
+    print(f"Your tip is {tip}" )
+    print (f"Your total payable amount is {share + tip}")
+
+
+if percentvar <= 20:
+    print("you stingy fella; tip more !!!")
+
+elif percentvar > 20:
+    print("good on ya for tipping generously")
+        
